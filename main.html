@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="no-js">
 
 <head>
     <title>Main Tasks</title>
@@ -10,47 +10,49 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <!-- Page CSS -->
+    <!-- Corner Box CSS -->
+    <!-- <link rel="stylesheet" type="text/css" href="fonts/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/menu_cornerbox.css">
+
+    <!-- Customer CSS -->
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/main.css">
 
-
 </head>
 
-<!-- Inicio do Body -->
-
 <body class="">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-
-        <!-- Titulo do site e Menu -->
-        <!-- <header class="masthead mb-auto">
-            <div class="inner">
-                <h3 class="masthead-brand">Main Tasks</h3>
-                <nav class="nav nav-masthead justify-content-center">
-                    <a class="nav-link active" href="#">Home</a>
-                    <a class="nav-link" href="">Login</a>
-                </nav>
-            </div>
-        </header> -->
-
-        <!-- Começo do Conteudo do Site -->
-        <div role="main" class="inner cover">
-
+    <div class="cornerbox">
+        <div class="menu-wrap">
+            <nav class="menu">
+                <div class="profile"><img src="images/WhatsApp Image 2019-11-12 at 18.58.19.jpeg" alt=""><span>Natanael Melo</span></div>
+                <div class="icon-list">
+                    <a href="#"><i class="fa fa-fw fa-star-o"></i><span>New Tasks</span></a>
+                    <a href="#"><i class="fa fa-fw fa-bell-o"></i><span>Tasks Diarias</span></a>
+                    <a href="#"><i class="fa fa-fw fa-envelope-o"></i><span>Tasks Semanais</span></a>
+                    <a href="#"><i class="fa fa-fw fa-comment-o"></i><span>Tasks Mensais</span></a>
+                </div>
+            </nav>
+            <button class="close-button" id="close-button">Close Menu</button>
         </div>
-
-        <!-- Footer -->
-        <footer class="mastfoot mt-auto">
-            <div class="inner">
-                <p>Direitos reservados a <a href="https://www.facebook.com/natanael.smelo">Natanael Melo</a>!</p>
+        <button class="menu-button" id="open-button"></button>
+        <div class="content-wrap">
+            <div class="content-header">
+                <header class="codrops-header masthead mb-auto">
+                    <div class="inner">
+                        <h3 class="masthead-brand">Main Tasks</h3>
+                        <nav class="nav nav-masthead justify-content-center">
+                            <a class="nav-link" href="home.html">Sair</a>
+                        </nav>
+                    </div>
+                </header>
             </div>
-        </footer>
+        </div>
+        <!-- /content-wrap -->
     </div>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- /cornerbox -->
+</body>
+<script src="js/classie.js"></script>
+<script src="js/main.js"></script>
 </body>
 
 </html>

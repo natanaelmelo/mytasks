@@ -1,32 +1,49 @@
-$(document).ready(function() {
-    // DOM variables
-    let languageDesktopButton = $('.extra-content__language'),
-        hamburguerMenu = $('.menu'),
-        languageMobileButton = $('.language'),
-        languageSelector = '.extra-content__language-selector';
+/*
+ * main.js
+ * http://www.codrops.com
+ *
+ * Licensed under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ * 
+ * Copyright 2014, Codrops
+ * http://www.codrops.com
+ */
+(function() {
 
-    languageDesktopButton.on('click', function() {
-        $(this).toggleClass('is-open');
+    var bodyEl = document.body,
+        content = document.querySelector('.content-wrap'),
+        openbtn = document.getElementById('open-button'),
+        closebtn = document.getElementById('close-button'),
+        isOpen = false;
 
-        toggleARIA($(this).find(languageSelector), 'aria-expanded');
-        toggleARIA($(this).find(languageSelector), 'aria-hidden');
-    });
-    hamburguerMenu.on("click", function() {
-        $(this).parent().parent().toggleClass('is-open');
+    function init() {
+        initEvents();
+    }
 
-        toggleARIA($(this).parent().parent(), 'aria-hidden');
-    });
+    function initEvents() {
+        openbtn.addEventListener('click', toggleMenu);
+        if (closebtn) {
+            closebtn.addEventListener('click', toggleMenu);
+        }
 
-    languageMobileButton.on('click', function() {
-        $(this).toggleClass('is-open');
+        // close the menu element if the target it´s not the menu element or one of its descendants..
+        content.addEventListener('click', function(ev) {
+            var target = ev.target;
+            if (isOpen && target !== openbtn) {
+                toggleMenu();
+            }
+        });
+    }
 
-        toggleARIA($(this), 'aria-expanded');
-    });
-});
+    function toggleMenu() {
+        if (isOpen) {
+            classie.remove(bodyEl, 'show-menu');
+        } else {
+            classie.add(bodyEl, 'show-menu');
+        }
+        isOpen = !isOpen;
+    }
 
-// Toggle ARIA attributes
-function toggleARIA(selector, ARIA) {
-    selector.attr(ARIA, function(i, attr) {
-        return attr == 'true' ? 'false' : 'true';
-    });
-}
+    init();
+
+})();

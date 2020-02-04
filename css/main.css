@@ -1,7 +1,12 @@
-.cover-container {
-    max-width: 100%;
+img {
+    width: 50px;
+    height: 50px;
 }
 
-.p3 {
-    padding: 0;
+.content-wrap {
+    overflow: hidden;
+}
+
+.masthead-brand {
+    margin-left: 3%;
 }
